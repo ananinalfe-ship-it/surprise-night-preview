@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>操偶师的手｜幕后5件事</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f5f5f5; font-family: 'Noto Sans SC', sans-serif; color: #333; -webkit-font-smoothing: antialiased; }
+  .draft-badge { position: fixed; top: 16px; right: 16px; background: rgba(184,130,42,0.9); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 3px; letter-spacing: 2px; z-index: 999; }
+  .phone-frame { max-width: 420px; margin: 0 auto; background: #fff; min-height: 100vh; }
+  .xhs-header { background: #fff; padding: 14px 16px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 100; }
+  .xhs-header .avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #1a1a1e, #b8822a); display: flex; align-items: center; justify-content: center; color: #f5e1aa; font-size: 12px; font-weight: 700; }
+  .xhs-header .name { font-size: 13px; font-weight: 600; color: #333; }
+  .xhs-header .follow { margin-left: auto; background: #ff2442; color: #fff; font-size: 11px; padding: 4px 14px; border-radius: 20px; font-weight: 500; }
+
+  .slide { width: 100%; aspect-ratio: 3/4; position: relative; overflow: hidden; }
+  .slide-cover { width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a1e 0%, #2a2520 50%, #1a1a1e 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 30px; text-align: center; }
+  .slide-cover::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 30% 50%, rgba(184,130,42,0.12) 0%, transparent 70%); }
+  .slide-cover .tag { display: inline-block; border: 1px solid #dcaf50; color: #dcaf50; font-size: 10px; letter-spacing: 3px; padding: 3px 14px; margin-bottom: 24px; position: relative; }
+  .slide-cover h1 { font-family: 'Noto Serif SC', serif; color: #f5e1aa; font-size: 28px; font-weight: 700; line-height: 1.5; margin-bottom: 12px; position: relative; }
+  .slide-cover .sub { color: #b8822a; font-size: 12px; letter-spacing: 1px; position: relative; }
+  .slide-indicator { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; }
+  .slide-indicator .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); }
+  .slide-indicator .dot.active { background: #fff; width: 16px; border-radius: 3px; }
+
+  .slide-content { width: 100%; aspect-ratio: 3/4; background: #fff; padding: 40px 24px; display: flex; flex-direction: column; justify-content: center; }
+  .slide-num { font-family: 'Noto Serif SC', serif; font-size: 48px; font-weight: 700; color: #dcaf50; line-height: 1; margin-bottom: 12px; }
+  .slide-content h2 { font-family: 'Noto Serif SC', serif; font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; line-height: 1.4; }
+  .slide-content p { font-size: 14px; color: #666; line-height: 2; margin-bottom: 12px; }
+  .slide-content .photo-note { background: #faf7f0; border-left: 3px solid #dcaf50; padding: 12px 16px; border-radius: 0 6px 6px 0; margin-top: 16px; font-size: 12px; color: #b8822a; }
+  .slide-content .photo-note span { color: #ccc; font-size: 11px; display: block; margin-top: 4px; }
+
+  .caption-area { padding: 16px; }
+  .caption-area .text { font-size: 14px; color: #333; line-height: 1.9; }
+  .caption-area .tags { margin-top: 12px; font-size: 13px; color: #2f7cf6; }
+  .caption-area .engagement { display: flex; gap: 24px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #f0f0f0; font-size: 12px; color: #999; }
+
+  .brand-footer { text-align: center; padding: 30px 20px; background: #1a1a1e; }
+  .brand-footer .tagline { color: #dcaf50; font-family: 'Noto Serif SC', serif; font-size: 14px; margin-bottom: 4px; }
+  .brand-footer .sub { color: #666; font-size: 11px; }
+</style>
+</head>
+<body>
+<div class="draft-badge">DRAFT PREVIEW</div>
+<div class="phone-frame">
+
+  <div class="xhs-header">
+    <div class="avatar">惊</div>
+    <div class="name">惊喜之夜</div>
+    <div class="follow">+ 关注</div>
+  </div>
+
+  <!-- Slide 1: Cover -->
+  <div class="slide">
+    <div class="slide-cover">
+      <div class="tag">惊喜之夜 · 幕后</div>
+      <h1>操偶师的手<br>幕后5件事</h1>
+      <div class="sub">你看到的是震撼，我们看到的是日常</div>
+    </div>
+    <div class="slide-indicator"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide-content">
+    <div class="slide-num">01</div>
+    <h2>凌晨4点开工</h2>
+    <p>观众晚上7点入场，我们从凌晨4点开始。等你觉得"这个世界好真实"时，我们已经忙了15小时了。</p>
+    <div class="photo-note">📷 配图①：凌晨后台准备的现场照，灯光暗淡<span>（竖版1080x1440，需提供真实照片）</span></div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide-content">
+    <div class="slide-num">02</div>
+    <h2>演出中出过事故<br>观众不知道</h2>
+    <p>装置异响，技术组30秒切换备用方案。观众零感知。</p>
+    <div class="photo-note">📷 配图②：后台监控屏前工作的画面<span>（竖版1080x1440，需提供真实照片）</span></div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide-content">
+    <div class="slide-num">03</div>
+    <h2>每场前有一场<br>"秘密会议"</h2>
+    <p>每场前15分钟微调演员节奏、互动强度。没有两场一样的演出。</p>
+    <div class="photo-note">📷 配图③：团队开场次调整会的现场照<span>（竖版1080x1440，需提供真实照片）</span></div>
+  </div>
+
+  <!-- Slide 5 -->
+  <div class="slide-content">
+    <div class="slide-num">04</div>
+    <h2>首演时我们<br>比观众还紧张</h2>
+    <p>灯光暗下来，音乐响起，所有紧张都变成了肾上腺素。</p>
+    <div class="photo-note">📷 配图④：首演前全员合照或后台等待画面<span>（竖版1080x1440，需提供真实照片）</span></div>
+  </div>
+
+  <!-- Slide 6 -->
+  <div class="slide-content">
+    <div class="slide-num">05</div>
+    <h2>演出后我们会<br>在后台偷偷哭</h2>
+    <p>有观众折回来说"谢谢你们"。每次听到，就知道这件事值得。</p>
+    <div class="photo-note">📷 配图⑤：后台庆功/拥抱的现场照<span>（竖版1080x1440，需提供真实照片）</span></div>
+  </div>
+
+  <!-- Caption -->
+  <div class="caption-area">
+    <div class="text">来看演出吧，我们在舞台背后等你 🎭</div>
+    <div class="tags">#沉浸式演出 #幕后故事 #惊喜之夜 #剧场日常 #操偶师</div>
+    <div class="engagement">
+      <span>🤍 收藏</span>
+      <span>💬 评论</span>
+      <span>↗ 分享</span>
+    </div>
+  </div>
+
+  <div class="brand-footer">
+    <div class="tagline">我们不设观众席，只造世界</div>
+    <div class="sub">惊喜之夜 Surprise Night</div>
+  </div>
+
+</div>
+</body>
+</html>
