@@ -6,9 +6,7 @@
 <title>5条血泪教训｜惊喜之夜</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     background: #f5f5f5;
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -16,44 +14,20 @@
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
-
-  .wechat-wrapper {
-    max-width: 580px;
-    margin: 0 auto;
-    background: #fff;
-    min-height: 100vh;
-  }
-
-  /* Draft badge */
+  .wechat-wrapper { max-width: 580px; margin: 0 auto; background: #fff; min-height: 100vh; }
   .draft-badge {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    background: rgba(184,130,42,0.9);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 3px;
-    letter-spacing: 2px;
-    z-index: 999;
+    position: fixed; top: 16px; right: 16px;
+    background: rgba(184,130,42,0.9); color: #fff;
+    font-size: 11px; font-weight: 700; padding: 4px 12px;
+    border-radius: 3px; letter-spacing: 2px; z-index: 999;
   }
-
-  /* Header bar */
   .wechat-header {
-    background: #fff;
-    padding: 12px 20px;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background: #fff; padding: 12px 20px; border-bottom: 1px solid #eee;
+    display: flex; align-items: center; gap: 10px;
+    position: sticky; top: 0; z-index: 100;
   }
   .wechat-header .avatar {
-    width: 36px; height: 36px;
-    border-radius: 50%;
+    width: 36px; height: 36px; border-radius: 50%;
     background: linear-gradient(135deg, #1a1a1e, #b8822a);
     display: flex; align-items: center; justify-content: center;
     color: #f5e1aa; font-size: 14px; font-weight: 700;
@@ -61,182 +35,64 @@
   .wechat-header .info { flex: 1; }
   .wechat-header .name { font-size: 14px; font-weight: 500; color: #333; }
   .wechat-header .time { font-size: 11px; color: #999; }
-
-  /* Cover */
   .cover-placeholder {
-    width: 100%;
-    background: linear-gradient(135deg, #1a1a1e 0%, #2a2520 50%, #1a1a1e 100%);
-    padding: 60px 30px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    width: 100%; background: linear-gradient(135deg, #1a1a1e 0%, #2a2520 50%, #1a1a1e 100%);
+    padding: 60px 30px; text-align: center; position: relative; overflow: hidden;
   }
   .cover-placeholder::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
     background: radial-gradient(ellipse at 30% 50%, rgba(184,130,42,0.15) 0%, transparent 70%);
   }
   .cover-placeholder .cover-tag {
-    display: inline-block;
-    border: 1px solid #dcaf50;
-    color: #dcaf50;
-    font-size: 11px;
-    letter-spacing: 3px;
-    padding: 4px 16px;
-    margin-bottom: 20px;
-    position: relative;
+    display: inline-block; border: 1px solid #dcaf50; color: #dcaf50;
+    font-size: 11px; letter-spacing: 3px; padding: 4px 16px; margin-bottom: 20px; position: relative;
   }
   .cover-placeholder h1 {
-    font-family: 'Noto Serif SC', serif;
-    color: #f5e1aa;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 16px;
-    position: relative;
+    font-family: 'Noto Serif SC', serif; color: #f5e1aa;
+    font-size: 26px; font-weight: 700; line-height: 1.5; margin-bottom: 16px; position: relative;
   }
-  .cover-placeholder .cover-sub {
-    color: #b8822a;
-    font-size: 13px;
-    letter-spacing: 1px;
-    position: relative;
-  }
-
-  /* Content area */
-  .content {
-    padding: 28px 22px 40px;
-  }
-
-  .lead {
-    font-size: 15px;
-    color: #666;
-    line-height: 2;
-    margin-bottom: 30px;
-  }
-  .lead strong {
-    color: #1a1a1a;
-    font-weight: 500;
-  }
-
-  /* Section titles */
+  .cover-placeholder .cover-sub { color: #b8822a; font-size: 13px; letter-spacing: 1px; position: relative; }
+  .content { padding: 28px 22px 40px; }
+  .lead { font-size: 15px; color: #666; line-height: 2; margin-bottom: 30px; }
+  .lead strong { color: #1a1a1a; font-weight: 500; }
   .section-num {
-    display: inline-block;
-    background: linear-gradient(135deg, #b8822a, #dcaf50);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 3px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    display: inline-block; background: linear-gradient(135deg, #b8822a, #dcaf50);
+    color: #fff; font-size: 12px; font-weight: 700; padding: 3px 12px;
+    border-radius: 3px; letter-spacing: 1px; margin-bottom: 10px;
   }
-
   h2 {
-    font-family: 'Noto Serif SC', serif;
-    font-size: 19px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 18px;
-    line-height: 1.5;
+    font-family: 'Noto Serif SC', serif; font-size: 19px; font-weight: 600;
+    color: #1a1a1a; margin-bottom: 18px; line-height: 1.5;
   }
-
-  p {
-    font-size: 15px;
-    color: #555;
-    line-height: 2;
-    margin-bottom: 16px;
-  }
-
-  /* Highlight box */
+  p { font-size: 15px; color: #555; line-height: 2; margin-bottom: 16px; }
   .highlight-box {
-    background: #faf7f0;
-    border-left: 3px solid #dcaf50;
-    padding: 16px 20px;
-    margin: 20px 0;
-    border-radius: 0 6px 6px 0;
+    background: #faf7f0; border-left: 3px solid #dcaf50;
+    padding: 16px 20px; margin: 20px 0; border-radius: 0 6px 6px 0;
   }
-  .highlight-box p {
-    color: #6b5a3a;
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
+  .highlight-box p { color: #6b5a3a; margin-bottom: 8px; font-size: 14px; }
   .highlight-box p:last-child { margin-bottom: 0; }
-
-  /* Blockquote */
   blockquote {
-    background: #1a1a1e;
-    color: #dcaf50;
-    padding: 20px 24px;
-    border-radius: 6px;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 15px;
-    line-height: 1.8;
-    margin: 24px 0;
-    text-align: center;
-    font-weight: 600;
+    background: #1a1a1e; color: #dcaf50; padding: 20px 24px; border-radius: 6px;
+    font-family: 'Noto Serif SC', serif; font-size: 15px; line-height: 1.8;
+    margin: 24px 0; text-align: center; font-weight: 600;
   }
-
-  /* Divider */
-  .divider {
-    width: 40px;
-    height: 2px;
-    background: linear-gradient(90deg, #dcaf50, transparent);
-    margin: 32px 0;
-  }
-
-  /* Photo placeholder */
+  .divider { width: 40px; height: 2px; background: linear-gradient(90deg, #dcaf50, transparent); margin: 32px 0; }
   .photo-placeholder {
-    width: 100%;
-    background: #f8f5f0;
-    border: 2px dashed #ddd;
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    margin: 20px 0;
-    color: #b8822a;
-    font-size: 13px;
-    line-height: 1.6;
+    width: 100%; background: #f8f5f0; border: 2px dashed #ddd; border-radius: 8px;
+    padding: 30px; text-align: center; margin: 20px 0; color: #b8822a; font-size: 13px; line-height: 1.6;
   }
-  .photo-placeholder span {
-    display: block;
-    color: #ccc;
-    font-size: 11px;
-    margin-top: 6px;
-  }
-
-  /* Brand footer */
+  .photo-placeholder span { display: block; color: #ccc; font-size: 11px; margin-top: 6px; }
   .brand-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background: #1a1a1e;
-    margin-top: 30px;
+    text-align: center; padding: 40px 20px; background: #1a1a1e; margin-top: 30px;
   }
-  .brand-footer .tagline {
-    color: #dcaf50;
-    font-family: 'Noto Serif SC', serif;
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-  .brand-footer .sub {
-    color: #666;
-    font-size: 12px;
-  }
-  .brand-footer .url {
-    color: #b8822a;
-    font-size: 12px;
-    margin-top: 12px;
-    letter-spacing: 1px;
-  }
+  .brand-footer .tagline { color: #dcaf50; font-family: 'Noto Serif SC', serif; font-size: 16px; margin-bottom: 6px; }
+  .brand-footer .sub { color: #666; font-size: 12px; }
+  .brand-footer .url { color: #b8822a; font-size: 12px; margin-top: 12px; letter-spacing: 1px; }
 </style>
 </head>
 <body>
-
 <div class="draft-badge">DRAFT PREVIEW</div>
-
 <div class="wechat-wrapper">
-
-  <!-- WeChat Header -->
   <div class="wechat-header">
     <div class="avatar">惊</div>
     <div class="info">
@@ -245,145 +101,95 @@
     </div>
   </div>
 
-  <!-- Cover -->
   <div class="cover-placeholder">
     <div class="cover-tag">惊喜之夜 · 行业手记</div>
     <h1>做沉浸式演出这两年<br>我们总结了5条血泪教训</h1>
     <div class="cover-sub">SURPRISE NIGHT ｜ 从业者视角</div>
   </div>
 
-  <!-- Content -->
   <div class="content">
-
     <p class="lead">两年前我们决定做一场沉浸式演出的时候，身边所有人都觉得我们疯了。两年后回头看，我们确实疯了——<strong>但也学到了一些课本上永远不会教的东西。</strong></p>
-
     <p>今天想跟同行们聊聊，我们踩过的坑、付过的代价、以及那些工作中真正重要的事。</p>
 
     <div class="divider"></div>
 
-    <!-- Section 1 -->
     <div class="section-num">PART 01</div>
     <h2>沉浸式不等于"让观众走来走去"</h2>
-
+    <div class="photo-placeholder">📷 配图①：观众被雾气和光影包围的现场照<span>（展现沉浸感氛围，1080x810横版）</span></div>
     <p>最初做方案的时候，我们对"沉浸式"的理解很粗浅：观众不坐在座位上，能在空间里自由走动，这就是沉浸式了吧？</p>
-
     <p><strong>大错特错。</strong></p>
-
     <p>我们第一版方案做了很复杂的空间动线，观众可以在三个区域之间自由穿梭。结果测试时发现，大部分观众就是站在原地不知道该往哪走，或者追着别人走，完全没有"沉浸"的感觉。</p>
-
     <div class="highlight-box">
       <p><strong>💡 后来我们明白了</strong></p>
       <p>沉浸式的核心不是空间自由度，而是<strong>情感参与度</strong>。观众是不是觉得自己"在这个故事里"，是不是忘记了自己是观众——这才是衡量沉浸感的真正标尺。</p>
     </div>
-
-    <p>所以我们重新设计了整个体验：不再追求"观众能去很多地方"，而是让每个观众在任何位置都能被故事包裹。当巨偶从你头顶缓缓走过，当演员在你耳边低语，当雾气和光影把你围住——这时候观众不需要走动，他们已经"在里面"了。</p>
-
-    <div class="photo-placeholder">
-      📷 配图位：观众被雾气和光影包围的现场照
-      <span>（需提供真实照片替换）</span>
-    </div>
+    <p>所以我们重新设计了整个体验：不再追求"观众能去很多地方"，而是让每个观众在任何位置都能被故事包裹。当演员在你耳边低语，当雾气和光影把你围住，当音乐从四面八方涌来——这时候观众不需要走动，他们已经"在里面"了。</p>
 
     <div class="divider"></div>
 
-    <!-- Section 2 -->
     <div class="section-num">PART 02</div>
-    <h2>巨型道具的安全标准，比你想象的严格10倍</h2>
-
-    <p>惊喜之夜最核心的视觉元素是6米高的巨偶。听起来很酷对吧？但在"很酷"走到观众面前之前，我们先要过的是安全这一关。</p>
-
-    <p>一个6米高的可操控巨偶，在观众中间行走、做动作——这件事的风险评估报告写了整整40页。材料强度测试、操控结构的冗余设计、紧急情况下的快速拆解方案、演出中实时监控的传感器——每一个环节都有严格的标准和验收流程。</p>
-
+    <h2>大型装置的安全标准，比你想象的严格10倍</h2>
+    <div class="photo-placeholder">📷 配图②：舞台装置搭建/安全检测过程的幕后照<span>（1080x810横版）</span></div>
+    <p>沉浸式演出往往需要大型舞台装置和机械设备，来营造超越日常的空间体验。听起来很酷对吧？但在"很酷"走到观众面前之前，先要过的是安全这一关。</p>
+    <p>当观众可以在装置之间自由走动、甚至触碰它们的时候，风险评估的复杂度是传统剧场的好几倍。我们的安全方案写了整整40页：材料强度测试、结构的冗余设计、紧急情况下的快速响应方案、演出中实时监控的传感器——每一个环节都有严格的标准和验收流程。</p>
     <div class="highlight-box">
       <p><strong>🔧 一次真实的应急</strong></p>
-      <p>有一次巨偶手臂关节在演出中出现异响。操偶师立刻启动应急预案，<strong>30秒内</strong>完成了安全评估和备用方案切换，观众完全没有察觉。这背后是无数次演练的结果。</p>
+      <p>有一次装置在演出中出现异常。技术团队立刻启动应急预案，<strong>30秒内</strong>完成了安全评估和备用方案切换，观众完全没有察觉。</p>
     </div>
-
     <blockquote>安全不是成本，是底线<br>观众信任你才会沉浸，而信任的前提是安全</blockquote>
 
-    <div class="photo-placeholder">
-      📷 配图位：巨偶结构细节 / 安全检测过程
-      <span>（需提供真实照片替换）</span>
-    </div>
-
     <div class="divider"></div>
 
-    <!-- Section 3 -->
     <div class="section-num">PART 03</div>
     <h2>观众动线设计，至少20次模拟测试</h2>
-
+    <div class="photo-placeholder">📷 配图③：动线设计图纸/平面图，或观众自由移动的现场拍摄<span>（1080x810横版）</span></div>
     <p>沉浸式演出和传统演出最大的区别之一，是观众是"活"的。他们会走动、会停留、会回头、会挤在一起——而你永远无法完全预测他们的行为。</p>
-
     <p>我们最初设计的动线很"完美"：观众从入口进入，沿着故事线依次经过三个场景，最后在高潮中汇聚。但第一次实测就崩了：有人反着走，有人停在第一个场景不动，有人直接跑到了结尾。</p>
-
     <div class="highlight-box">
       <p><strong>🧭 核心认知转变</strong></p>
-      <p>与其设计一条"正确"的路线，不如设计一个<strong>"怎么走都对"的空间</strong>。无论观众在哪个位置、朝哪个方向，都能看到巨偶、都能感受到故事、都不会错过关键瞬间。</p>
+      <p>与其设计一条"正确"的路线，不如设计一个<strong>"怎么走都对"的空间</strong>。无论观众在哪个位置、朝哪个方向，都能感受到故事、都不会错过关键瞬间。</p>
     </div>
-
-    <p>后来我们做了至少20次模拟测试，每次都用不同年龄、不同性格的测试观众。这个认知彻底改变了我们的设计思路。</p>
 
     <div class="divider"></div>
 
-    <!-- Section 4 -->
     <div class="section-num">PART 04</div>
     <h2>不要低估观众的创造力</h2>
-
+    <div class="photo-placeholder">📷 配图④：观众沉浸在演出中的现场抓拍，特别是自发互动的瞬间<span>（1080x810横版）</span></div>
     <p>这一条是最意外的收获。</p>
-
     <p>我们原本设计了一些"互动环节"：观众可以触摸某些道具、可以在特定时刻发出声音。但实际演出中，观众做出了很多我们完全没想到的事：</p>
-
     <div class="highlight-box">
-      <p>有小朋友对着巨偶说<strong>"不要担心，我会保护你"</strong></p>
-      <p>有情侣在山海经世界崩塌的场景中紧紧拥抱</p>
+      <p>有小朋友对着舞台上的角色喊<strong>"不要担心，我会保护你"</strong></p>
+      <p>有情侣在故事高潮的场景中紧紧拥抱</p>
       <p>有观众在演出结束后留在现场不肯走，坐在地上安静地感受空间</p>
     </div>
-
-    <p>这些"计划外"的反应反而成了演出中最动人的部分。所以我们后来调整了设计理念：<strong>不要试图控制观众的反应，而是给他们空间去创造属于自己的体验。</strong></p>
-
-    <div class="photo-placeholder">
-      📷 配图位：观众与巨偶互动的感人瞬间
-      <span>（需提供真实照片替换）</span>
-    </div>
+    <p>这些"计划外"的反应反而成了演出中最动人的部分。<strong>不要试图控制观众的反应，而是给他们空间去创造属于自己的体验。</strong></p>
 
     <div class="divider"></div>
 
-    <!-- Section 5 -->
     <div class="section-num">PART 05</div>
     <h2>复演不是复制，每一场都是"新"的</h2>
-
+    <div class="photo-placeholder">📷 配图⑤：演出前团队"场次调整会"或演员后台准备的画面<span>（1080x810横版）</span></div>
     <p>很多人以为沉浸式演出只要排好了，之后每场照着演就行。实际上完全不是这样。</p>
-
     <p>因为观众每场都不同，他们的反应、情绪、移动节奏都在变化。周末场和工作日场的观众状态完全不同，亲子场和成人场的氛围也天差地别。</p>
-
     <div class="highlight-box">
       <p><strong>🎬 我们的做法</strong></p>
-      <p>每场演出前做一个15分钟的<strong>"场次调整会"</strong>：根据今天的观众组成（孩子多还是成人多、团体还是散客）微调演员的节奏、巨偶的动作幅度、互动环节的强度。</p>
+      <p>每场演出前做一个15分钟的<strong>"场次调整会"</strong>：根据今天的观众组成微调演员的节奏、装置的运行参数、互动环节的强度。</p>
     </div>
-
     <blockquote>每一场演出都是一次新的创作<br>这是沉浸式演出最迷人的地方</blockquote>
 
     <div class="divider"></div>
 
     <h2>写在最后</h2>
-
+    <div class="photo-placeholder">📷 配图⑥：演出结束后团队合影，或观众散场时的现场氛围照<span>（1080x810横版）</span></div>
     <p>这两年我们犯过很多错，也经历过很多崩溃的时刻。但每次看到观众走出剧场时的表情——有人眼眶发亮，有人还没从故事里走出来，有小朋友拉着妈妈说"我还想再看一次"——我们就知道，这件事值得继续做下去。</p>
-
     <p><strong>如果你也在做沉浸式演出，或者对这个领域感兴趣，欢迎交流。我们踩过的坑，希望你们不用再踩。</strong></p>
-
-    <div class="photo-placeholder">
-      📷 配图位：演出结束后团队合影 / 观众散场时的表情
-      <span>（需提供真实照片替换）</span>
-    </div>
-
   </div>
 
-  <!-- Brand Footer -->
   <div class="brand-footer">
     <div class="tagline">我们不设观众席，只造世界</div>
     <div class="sub">惊喜之夜 Surprise Night｜沉浸式喜剧与体验式演出</div>
     <div class="url">www.surprise-night.com</div>
   </div>
-
 </div>
 </body>
 </html>
